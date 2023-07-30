@@ -1,28 +1,45 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+body {
+  margin: 0px 15px 0px 15px;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+.breed-select {
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+.temperament {
+  font-weight: bold;
+}
+
+.cat-info {
+  display: flex;
+  gap: 10px ;
+  align-items: center;
+}
+
+.description {
+  background-color:blanchedalmond;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+h2 {
+  display: block;
+  margin-top: 10px;
+}
+
+p {
+  display: block;
+  margin-bottom: 0px;
+}
+
+img {
+  display: block;
+  height: 100%;
+  border: 1px solid black;
+}
+
+
+.is-hidden {
+  display: none;
 }
