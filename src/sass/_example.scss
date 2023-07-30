@@ -2,43 +2,117 @@ body {
   margin: 0px 15px 0px 15px;
 }
 
+.loader {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  margin: 10px auto 50px;
+  width: 210px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
 .breed-select {
-  margin-bottom: 15px;
-  margin-top: 10px;
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 5px 0 25px;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: #320a28;
+  }
+
 }
 
 .temperament {
   font-weight: bold;
 }
 
-.cat-info {
-  display: flex;
-  gap: 10px ;
-  align-items: center;
-}
-
-.description {
-  background-color:blanchedalmond;
-  border: 1px solid black;
-  padding: 5px;
-}
-
-h2 {
-  display: block;
-  margin-top: 10px;
-}
-
-p {
-  display: block;
-  margin-bottom: 0px;
-}
-
 img {
   display: block;
   height: 100%;
-  border: 1px solid black;
+    border-radius: 10px;
 }
 
+.cat-info {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  width: 520px;
+  box-shadow: 0px 0px 31px -1px rgba(0, 0, 0, 0.75);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.cat-info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cat-info:hover::before {
+  height: 100%;
+}
+
+.cat-info:hover {
+  box-shadow: none;
+}
+
+.cat-info:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
 
 .is-hidden {
   display: none;
